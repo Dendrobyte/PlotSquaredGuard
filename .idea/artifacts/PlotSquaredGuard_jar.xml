@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PlotSquaredGuard:jar">
+    <output-path>$PROJECT_DIR$/../MC TESTING SERVER (1.13)/plugins</output-path>
+    <root id="archive" name="PlotSquaredGuard.jar">
+      <element id="module-output" name="PlotSquaredGuard" />
+    </root>
+  </artifact>
+</component>

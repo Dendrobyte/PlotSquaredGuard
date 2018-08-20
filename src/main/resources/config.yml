@@ -1,0 +1,39 @@
+plot-worlds:
+  - plotworld
+  - creative
+  - redstonerank
+prohibit-interact-items:
+  - REPEATER
+  - DIODE_BLOCK_OFF
+  - DIODE_BLOCK_ON
+  - HOPPER
+  - STONE_BUTTON
+  - IRON_DOOR
+  - JUNGLE_DOOR
+  - JUNGLE_BUTTON
+  - DISPENSER
+  - DROPPER
+please-choose-from-ONLY-the-following-items:
+  - IRON_DOOR
+  - OAK_DOOR
+  - SPRUCE_DOOR
+  - BIRCH_DOOR
+  - JUNGLE_DOOR
+  - ACACIA_DOOR
+  - DARK_OAK_DOOR
+  - OAK_BUTTON
+  - SPRUCE_BUTTON
+  - BIRCH_BUTTON
+  - JUNGLE_BUTTON
+  - ACACIA_BUTTON
+  - DARK_OAK_BUTTON
+  - LEVER
+  - STONE_BUTTON
+  - REPEATER
+  - HOPPER
+  - DISPENSER
+  - DROPPER
+
+blocks-to-use-for-1.12:
+  - DIODE_BLOCK_OFF
+  - DIODE_BLOCK_ON
