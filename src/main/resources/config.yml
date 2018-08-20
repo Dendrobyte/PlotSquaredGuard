@@ -6,6 +6,7 @@ prohibit-interact-items:
   - REPEATER
   - DIODE_BLOCK_OFF
   - DIODE_BLOCK_ON
+  - COMPARATOR
   - HOPPER
   - STONE_BUTTON
   - IRON_DOOR
