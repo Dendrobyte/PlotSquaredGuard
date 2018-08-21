@@ -4,6 +4,7 @@ version: 1.0
 main: com.bytekangaroo.p2extension.Main
 description: Expands upon the plots.use permission in PlotSquared
 api-version: 1.13
+depend: [PlotSquared]
 permissions:
   plotguard.interact.bypass:
     description: Allows a player to bypass any interactable object despite the limitations
