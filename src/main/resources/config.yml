@@ -2,6 +2,10 @@ plot-worlds:
   - plotworld
   - creative
   - redstonerank
+
+# Valid item names can be found here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+# Ensure you use all caps, and properly format the list!
+# DIODE_BLOCK_ON/OFF is equal to a REPEATER but for 1.12
 prohibit-interact-items:
   - REPEATER
   - DIODE_BLOCK_OFF
@@ -14,27 +18,12 @@ prohibit-interact-items:
   - JUNGLE_BUTTON
   - DISPENSER
   - DROPPER
-please-choose-from-ONLY-the-following-items:
-  - IRON_DOOR
-  - OAK_DOOR
-  - SPRUCE_DOOR
-  - BIRCH_DOOR
-  - JUNGLE_DOOR
-  - ACACIA_DOOR
-  - DARK_OAK_DOOR
-  - OAK_BUTTON
-  - SPRUCE_BUTTON
-  - BIRCH_BUTTON
-  - JUNGLE_BUTTON
-  - ACACIA_BUTTON
-  - DARK_OAK_BUTTON
-  - LEVER
-  - STONE_BUTTON
-  - REPEATER
-  - HOPPER
-  - DISPENSER
-  - DROPPER
 
-blocks-to-use-for-1.12:
-  - DIODE_BLOCK_OFF
-  - DIODE_BLOCK_ON
+# Valid entity names can be found here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html
+# Please only use mobs... Won't break otherwise, but won't make much sense
+# Ensure you use all caps, and properly format the list!
+prohibit-interact-entities:
+  - IRON_GOLEM
+  - PARROT
+  - HORSE
+  - SLIME

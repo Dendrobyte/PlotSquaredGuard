@@ -1,10 +1,17 @@
 name: PlotSquaredGuard
 author: ByteKangaroo
-version: 1.0
+version: 1.2
 main: com.bytekangaroo.p2extension.Main
 description: Expands upon the plots.use permission in PlotSquared
 api-version: 1.13
 depend: [PlotSquared]
+commands:
+  plotguardreload:
+    usage: /<command>
+    aliases: [psgreload, guardreload]
+    description: Allows a player to reload the configuration.
 permissions:
   plotguard.interact.bypass:
     description: Allows a player to bypass any interactable object despite the limitations
+  plotguard.reload:
+    description: Reloads the plotguard configuration

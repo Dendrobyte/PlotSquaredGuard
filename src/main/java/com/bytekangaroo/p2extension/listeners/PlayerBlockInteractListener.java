@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-public class PlayerInteractListener implements Listener {
+public class PlayerBlockInteractListener implements Listener {
 
     private PlotAPI plotAPI = Main.getPlotAPI();
     private String prefix = Main.getInstance().getPrefix();
@@ -35,8 +35,6 @@ public class PlayerInteractListener implements Listener {
         }
         Location interactedLoc = block.getLocation();
         // TODO: Do a general check to see if a player is in a plot, versus checking the worlds. (Temporary plots?) Works otherwise.
-
-        // DEBUG: System.out.println("1 - Player: " + player.getName() +"\nBlock Name/Type: " + block.getType() + "\ntoString: " + block.getType().toString());
 
         // Check if the plot is in one of the worlds that should be checked
         Plot plot = plotAPI.getPlot(interactedLoc);
@@ -54,6 +52,8 @@ public class PlayerInteractListener implements Listener {
         for(String name : prohibitedItemNames){
             if(blockName.equals(name)){
                 isProhibited = true;
+            } else {
+                continue;
             }
         }
 
