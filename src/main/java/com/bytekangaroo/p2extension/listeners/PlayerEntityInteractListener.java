@@ -39,8 +39,6 @@ public class PlayerEntityInteractListener implements Listener {
         Entity entity = event.getRightClicked();
         Location location = entity.getLocation();
 
-        System.out.println("*yeet*");
-        System.out.println(entity.getType().toString());
         /* Yes I copied this from the other event class... Should make it have a single location? */
         Plot plot = plotAPI.getPlot(location);
         List<String> worldNames = config.getStringList("plot-worlds");

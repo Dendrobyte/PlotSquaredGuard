@@ -12,6 +12,10 @@
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
+        <repository>
+            <id>plotsquared</id>
+            <url>http://ci.athion.net/job/PlotSquared/ws/mvn/</url>
+        </repository>
     </repositories>
     <dependencies>
         <!--Spigot API-->
@@ -29,5 +33,12 @@
             <scope>provided</scope>
         </dependency>
         <!--PlotSquared API-->
+        <dependency>
+            <groupId>com.plotsquared</groupId>
+            <artifactId>plotsquared-api</artifactId>
+            <version>latest</version>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 </project>
