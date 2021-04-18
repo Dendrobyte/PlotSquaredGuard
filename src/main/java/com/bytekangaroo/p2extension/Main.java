@@ -2,7 +2,7 @@ package com.bytekangaroo.p2extension;
 
 import com.bytekangaroo.p2extension.listeners.PlayerBlockInteractListener;
 import com.bytekangaroo.p2extension.listeners.PlayerEntityInteractListener;
-import com.intellectualcrafters.plot.api.PlotAPI;
+import com.plotsquared.core.api.PlotAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;

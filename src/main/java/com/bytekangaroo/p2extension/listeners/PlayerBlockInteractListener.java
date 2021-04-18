@@ -1,11 +1,9 @@
 package com.bytekangaroo.p2extension.listeners;
 
 import com.bytekangaroo.p2extension.Main;
-import com.intellectualcrafters.plot.api.PlotAPI;
-import com.intellectualcrafters.plot.object.Plot;
-import com.intellectualcrafters.plot.object.PlotPlayer;
+import com.plotsquared.core.api.PlotAPI;
+import com.plotsquared.core.plot.Plot;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -15,7 +13,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -34,12 +31,12 @@ public class PlayerBlockInteractListener implements Listener {
             return;
         }
         Location interactedLoc = block.getLocation();
+        String worldName = interactedLoc.getWorld().getName();
         // TODO: Do a general check to see if a player is in a plot, versus checking the worlds. (Temporary plots?) Works otherwise.
 
         // Check if the plot is in one of the worlds that should be checked
-        Plot plot = plotAPI.getPlot(interactedLoc);
         List<String> worldNames = config.getStringList("plot-worlds");
-        if(!worldNames.contains(interactedLoc.getWorld().getName())){
+        if(!worldNames.contains(worldName)){
             // If the world is NOT in the configuration, then don't bother checking the event.
             return;
         } // Otherwise, continue onwards!
@@ -56,6 +53,10 @@ public class PlayerBlockInteractListener implements Listener {
                 continue;
             }
         }
+
+        // Grab the plot object based on player's current
+        com.plotsquared.core.location.Location plotLocation = new com.plotsquared.core.location.Location(worldName, interactedLoc.getBlockX(), interactedLoc.getBlockY(), interactedLoc.getBlockZ());
+        Plot plot = Plot.getPlot(plotLocation);
 
         // Item is prohibited to be interacted with
         if(isProhibited){
@@ -78,8 +79,6 @@ public class PlayerBlockInteractListener implements Listener {
             // Cancel the event if checks could not be met.
             event.setCancelled(true);
             player.sendMessage(prefix + "You can not interact with that item if you are not part of this plot!");
-            Location plotSide = new Location(Bukkit.getWorld(plot.getSide().getWorld()), plot.getSide().getX(), plot.getSide().getY(), plot.getSide().getZ());
-            player.teleport(plotSide);
         }
 
     }

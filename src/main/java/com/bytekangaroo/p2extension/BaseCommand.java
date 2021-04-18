@@ -1,6 +1,5 @@
 package com.bytekangaroo.p2extension;
 
-import com.sun.org.apache.xml.internal.utils.StringBufferPool;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

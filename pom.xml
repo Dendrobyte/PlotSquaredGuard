@@ -16,13 +16,17 @@
             <id>plotsquared</id>
             <url>http://ci.athion.net/job/PlotSquared/ws/mvn/</url>
         </repository>
+        <!-- PlotSquared -->
+        <repository>
+            <id>IntellectualSites</id>
+            <url>https://mvn.intellectualsites.com/content/groups/public/</url>
+        </repository>
     </repositories>
     <dependencies>
-        <!--Spigot API-->
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.13-R0.1-SNAPSHOT</version>
+            <version>1.16.5-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <!--Bukkit API-->
@@ -32,12 +36,12 @@
             <version>1.13-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
-        <!--PlotSquared API-->
+
+        <!-- PlotSquared Core API -->
         <dependency>
             <groupId>com.plotsquared</groupId>
-            <artifactId>plotsquared-api</artifactId>
-            <version>latest</version>
-            <scope>provided</scope>
+            <artifactId>PlotSquared-Core</artifactId>
+            <version>5.13.11</version>
         </dependency>
 
     </dependencies>
