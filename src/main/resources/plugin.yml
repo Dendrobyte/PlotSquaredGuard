@@ -1,6 +1,6 @@
 name: PlotSquaredGuard
 author: ByteKangaroo
-version: 1.2
+version: 1.3
 main: com.bytekangaroo.p2extension.Main
 description: Expands upon the plots.use permission in PlotSquared
 api-version: 1.13

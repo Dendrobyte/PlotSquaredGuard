@@ -1,8 +1,8 @@
 package com.bytekangaroo.p2extension.listeners;
 
 import com.bytekangaroo.p2extension.Main;
-import com.intellectualcrafters.plot.api.PlotAPI;
-import com.intellectualcrafters.plot.object.Plot;
+import com.plotsquared.core.api.PlotAPI;
+import com.plotsquared.core.plot.Plot;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -40,7 +40,8 @@ public class PlayerEntityInteractListener implements Listener {
         Location location = entity.getLocation();
 
         /* Yes I copied this from the other event class... Should make it have a single location? */
-        Plot plot = plotAPI.getPlot(location);
+        com.plotsquared.core.location.Location plotLocation = new com.plotsquared.core.location.Location(location.getWorld().getName(), location.getBlockX(), location.getBlockY(), location.getBlockZ());
+        Plot plot = Plot.getPlot(plotLocation);
         List<String> worldNames = config.getStringList("plot-worlds");
         if(!worldNames.contains(location.getWorld().getName())){
             // If the world is NOT in the configuration, then don't bother checking the event.
@@ -81,8 +82,6 @@ public class PlayerEntityInteractListener implements Listener {
             // Cancel the event if checks could not be met.
             event.setCancelled(true);
             player.sendMessage(prefix + "You can not interact with that entity if you are not part of this plot!");
-            Location plotSide = new Location(Bukkit.getWorld(plot.getSide().getWorld()), plot.getSide().getX(), plot.getSide().getY(), plot.getSide().getZ());
-            player.teleport(plotSide);
         }
 
     }

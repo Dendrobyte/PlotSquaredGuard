@@ -3,7 +3,6 @@ package com.bytekangaroo.p2extension.listeners;
 import com.bytekangaroo.p2extension.Main;
 import com.plotsquared.core.api.PlotAPI;
 import com.plotsquared.core.plot.Plot;
-import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.configuration.file.FileConfiguration;

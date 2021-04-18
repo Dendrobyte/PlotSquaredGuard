@@ -2,7 +2,7 @@
   <artifact type="jar" name="PlotSquaredGuard:jar">
     <output-path>D:/MC TESTING SERVER (1.16)/plugins</output-path>
     <root id="archive" name="PlotSquaredGuard.jar">
-      <element id="module-output" name="PlotSquaredExtendedLimitations" />
+      <element id="module-output" name="PlotSquaredGuard" />
     </root>
   </artifact>
 </component>
